@@ -1,0 +1,50 @@
+ /*Css background body code*/
+  .red {
+    background: red;
+  }
+
+  .blue {
+    background: blue;
+  }
+
+  .green {
+    background: green;
+  }
+  .yellow {
+    background: yellow;
+    opacity: 0.5;
+  }
+
+  .orange {
+    background: orange;
+  }
+
+  .gray {
+    background: gray;
+  }
+
+
+/*Css text code*/
+
+  .red_text {
+    color: red;
+  }
+
+  .blue_text {
+    color: blue;
+  }
+
+  .green_text {
+    color: green;
+  }  
+  .yellow_text {
+    color: yellow;
+  }
+
+  .orange_text {
+    color: orange;
+  }
+
+  .gray_text {
+    color: gray;
+  }  

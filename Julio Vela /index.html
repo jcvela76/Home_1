@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head >
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script type="text/javascript" src="js/sandbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+
+
+	<body ng-controller="MyController as ctrl"  ng-class="ctrl.userObjectSelection.class">
+		<div >
+			<h1 ng-bind="ctrl.headerTitle"></h1>
+			<h3>Select a theme</h3>
+	      <input type="radio"
+	             name="color2"
+	             ng-value="ctrl.redValue"
+	             ng-model="ctrl.userObjectSelection"> Red
+	      <input type="radio"
+	             name="color2"
+	             ng-value="ctrl.blueValue"
+	             ng-model="ctrl.userObjectSelection"> Blue
+	      <input type="radio"
+	             name="color2"
+	             ng-value="ctrl.greenValue"
+	             ng-model="ctrl.userObjectSelection"> Green
+	      <input type="radio"
+	             name="color2"
+	             ng-value="ctrl.yellowValue"
+	             ng-model="ctrl.userObjectSelection"> Yellow
+	      <input type="radio"
+	             name="color2"
+	             ng-value="ctrl.orangeValue"
+	             ng-model="ctrl.userObjectSelection"> Orange
+	      <input type="radio"
+	             name="color2"
+	             ng-value="ctrl.grayValue"
+	             ng-model="ctrl.userObjectSelection"> Gray
+	      <div ng-bind="ctrl.userObjectSelection.class" ng-class="ctrl.userObjectSelection.class+ '_text'"></div>
+
+
+
+
+		</div>
+
+
+
+
+
+	</body>
+</html>
