@@ -1,50 +1,87 @@
+ body{
+  margin: 0px;
+  display: 0px;
+ }
  /*Css background body code*/
   .red {
-    background: red;
+    background: rgba(242, 68, 8, 0.5); 
   }
 
   .blue {
-    background: blue;
+    background: rgba(70, 64, 186, 0.5); 
   }
 
   .green {
-    background: green;
+    background: rgba(64, 218, 96, 0.5); 
   }
   .yellow {
-    background: yellow;
-    opacity: 0.5;
+    background: rgba(222, 218, 96, 0.5); 
   }
 
   .orange {
-    background: orange;
+    background: rgba(252, 144, 5, 0.5); 
   }
 
   .gray {
-    background: gray;
+    background: rgba(129, 127, 124, 0.5); 
   }
 
 
 /*Css text code*/
 
-  .red_text {
-    color: red;
+  .red_div_1 {
+    background: rgba(242, 68, 8, 1); 
   }
 
-  .blue_text {
-    color: blue;
+  .blue_div_1 {
+    background: rgba(70, 64, 186, 1);
   }
 
-  .green_text {
-    color: green;
+  .green_div_1 {
+    background: rgba(64, 218, 96, 1); 
   }  
-  .yellow_text {
-    color: yellow;
+  .yellow_div_1 {
+    background: rgba(222, 218, 96, 1); 
   }
 
-  .orange_text {
-    color: orange;
+  .orange_div_1 {
+    background: rgba(252, 144, 5, 1); 
   }
 
-  .gray_text {
-    color: gray;
+  .gray_div_1 {
+    background: rgba(129, 127, 124, 1);
   }  
+
+
+ .red_div_2 {
+    background: rgba(242, 68, 8, 0.15); 
+  }
+
+  .blue_div_2 {
+    background: rgba(70, 64, 186, 0.15);
+  }
+
+  .green_div_2 {
+    background: rgba(64, 218, 96, 0.15); 
+  }  
+  .yellow_div_2 {
+    background: rgba(222, 218, 96, 0.15); 
+  }
+
+  .orange_div_2 {
+    background: rgba(252, 144, 5, 0.15); 
+  }
+
+  .gray_div_2 {
+    background: rgba(129, 127, 124, 0.15);
+  }  
+  .left{
+
+    width: 50%;
+    margin: 5% auto;
+    padding: 5% 0%;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+  }
+  .clear {clear: both;}

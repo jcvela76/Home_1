@@ -31,11 +31,18 @@
 	             name="color2"
 	             ng-value="ctrl.orangeValue"
 	             ng-model="ctrl.userObjectSelection"> Orange
-	      <input type="radio"
+	      <input checked
+	      		 type="radio"
 	             name="color2"
 	             ng-value="ctrl.grayValue"
 	             ng-model="ctrl.userObjectSelection"> Gray
-	      <div ng-bind="ctrl.userObjectSelection.class" ng-class="ctrl.userObjectSelection.class+ '_text'"></div>
+	      <div ng-class="ctrl.userObjectSelection.class+ '_div_1 left'">
+	      	Theme Div 1 with color: <span  ng-bind="ctrl.userObjectSelection.class " ></span>
+	      </div>
+	      <div ng-class="ctrl.userObjectSelection.class+ '_div_2 left'">
+	      	Theme Div 2 with color: <span  ng-bind="ctrl.userObjectSelection.class " ></span>
+	      </div>
+	      
 
 
 
