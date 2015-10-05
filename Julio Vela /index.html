@@ -35,23 +35,72 @@
 	      		 type="radio"
 	             name="color2"
 	             ng-value="ctrl.grayValue"
-	             ng-model="ctrl.userObjectSelection"> Gray
-	      <div ng-class="ctrl.userObjectSelection.class+ '_div_1 left'">
+	             ng-model="ctrl.userObjectSelection"> None
+	      <div ng-class="ctrl.userObjectSelection.class_div_1" class="left">
 	      	Theme Div 1 with color: <span  ng-bind="ctrl.userObjectSelection.class " ></span>
 	      </div>
-	      <div ng-class="ctrl.userObjectSelection.class+ '_div_2 left'">
+	      <div ng-class="ctrl.userObjectSelection.class_div_2" class="left">
 	      	Theme Div 2 with color: <span  ng-bind="ctrl.userObjectSelection.class " ></span>
 	      </div>
-	      
+	      <div class="clear"></div>
+	      <hr>
+
+	      <div>
+	      	<div class="left-content">
+	      		
+	      		<h3>My files</h3>
+			      <input type="checkbox" ng-model="ctrl.showContent">Hide all <br><br>
+			      
+			    <h4>Personal</h4>  
+			   
+			        <ul ng-hide="ctrl.showContent" ng-repeat="item in ctrl.personalArray">
+			          <li ng-bind="item"></li> 
+			        </ul>   
+			    <h4>Work</h4>  
+			   
+			        <ul ng-hide="ctrl.showContent" ng-repeat="item in ctrl.workArray">
+			          <li ng-bind="item"></li> 
+			        </ul>   
 
 
+			    <h4>Trip</h4>  
+			   
+			        <ul ng-hide="ctrl.showContent" ng-repeat="item in ctrl.tripArray">
+			          <li ng-bind="item"></li> 
+			        </ul>       
 
+
+	      	</div>
+
+	      	<div class="left-content">
+	      		
+	      		 <div>
+            		<h2>Add Files </h2>
+            		<input type="text" ng-model="ctrl.itemObjectSelection">
+            		<button ng-click="ctrl.addItem()">Add Item</button>
+          		</div>
+
+          		<div>
+          		  <div ng-show="ctrl.errorDetect">Please we need a content </div>	
+		          <input type="radio"
+			             name="item_array"
+			             ng-value="ctrl.personalArray"
+			             ng-model="ctrl.itemsArray"> Personal<br>
+			      <input type="radio"
+			             name="item_array"
+			             ng-value="ctrl.workArray"
+			             ng-model="ctrl.itemsArray"> Work<br>
+			      <input type="radio"
+			             name="item_array"
+			             ng-value="ctrl.tripArray"
+			             ng-model="ctrl.itemsArray"> Trip<br>
+          		</div>
+
+	      	</div>
+	      	<div class="clear"></div>
+	      </div>
 
 		</div>
-
-
-
-
 
 	</body>
 </html>

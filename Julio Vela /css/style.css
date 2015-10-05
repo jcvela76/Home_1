@@ -23,7 +23,7 @@
   }
 
   .gray {
-    background: rgba(129, 127, 124, 0.5); 
+    background: #fff; 
   }
 
 
@@ -85,3 +85,8 @@
     border: 2px solid #ccc;
   }
   .clear {clear: both;}
+
+  .left-content{
+    float: left;
+    width: 50%;
+  }

@@ -81,10 +81,10 @@ transition-duration: .2s;
 	margin-left: -20px;
     padding-top: 15px;
     width: 100px;
-    margin-right: -50px;
+    margin-right: 1500px;
 }
 .icon-menu:hover ~ .icon{
-	margin: 0px;
+	margin: 0px 20px;
 }
 .icon-menu:hover ~ .icon-menu-right{
 	margin-left: 50px;
