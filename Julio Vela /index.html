@@ -54,19 +54,19 @@
 			      
 			    <h4><i class="fa fa-folder"></i> Personal</h4>  
 			   
-			        <ul ng-hide="ctrl.showContent" ng-repeat="item in ctrl.personalArray">
+			        <ul ng-hide="ctrl.showContent" ng-repeat="item in ctrl.personalArray track by $index">
 			          <li ng-bind="item"></li> 
 			        </ul>   
 			    <h4><i class="fa fa-folder"></i> Work</h4>  
 			   
-			        <ul ng-hide="ctrl.showContent" ng-repeat="item in ctrl.workArray">
+			        <ul ng-hide="ctrl.showContent" ng-repeat="item in ctrl.workArray track by $index">
 			          <li ng-bind="item"></li> 
 			        </ul>   
 
 
 			    <h4><i class="fa fa-folder"></i> Trip</h4>  
 			   
-			        <ul ng-hide="ctrl.showContent" ng-repeat="item in ctrl.tripArray">
+			        <ul ng-hide="ctrl.showContent" ng-repeat="item in ctrl.tripArray track by $index">
 			          <li ng-bind="item"></li> 
 			        </ul>       
 
