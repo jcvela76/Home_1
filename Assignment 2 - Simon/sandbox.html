@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+    <script type="text/javascript" src="sandbox.js"></script>
+    <script type="text/javascript" src="services.js"></script>
+
+    <style type="text/css">
+
+    </style>
+  </head>
+  <body ng-app="MyApp">
+
+
+<div ng-controller="MyController as ctrl">
+<!--       <div ng-repeat="folder in yourCtrl.folders">
+        <label ng-bind="folder.name"></label>
+      </div> -->
+      <h2 ng-bind="ctrl.Student.name"></h2>
+
+      <label>Assigment Name</label>
+      <input type="text"
+             ng-model="ctrl.assigmentName" 
+             placeholder="Name">
+
+      <br>       
+      <label>Assigment Score</label>
+      <input type="number" 
+             ng-model="ctrl.assigmentScore"
+             placeholder="Score">
+
+      
+
+      <button ng-click="ctrl.addScore(ctrl.assigmentName,ctrl.assigmentScore)">Add</button>
+      <br><br>
+      <table>
+        <tr>
+          <td width="200">Name Assigment</td>
+          <td width="200">Score Assigment</td>
+        </tr>
+      </table>
+
+      <table ng-repeat="assigment in ctrl.arrayAssigments track by $index">
+        <tr>
+          <td width="200" ng-bind="assigment.name"></td>
+          <td width="200" ng-bind="assigment.score"></td>
+        </tr>  
+      </table>
+
+
+      <h2>Averange</h2>
+      <span ng-bind="ctrl.Student.aveScore()"></span>
+
+
+
+
+    </div>
+  </body>
+</html>
