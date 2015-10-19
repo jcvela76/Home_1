@@ -2,28 +2,35 @@
 angular.module('MyApp', [])
 
 
-.controller('MyController', function (Person,funAssigments) {
+.controller('MyController', function ($scope,$timeout,$interval,Color,funAssigments,COLOR_PLAY) {
   var self = this;
 
-  self.arrayAssigments = [];
-  self.Student = new Person('Julio', []);
+  self.color_play = COLOR_PLAY;
+  self.arrayColors = [];
+  
 
+
+
+
+  
 
      //self.Assigment = new Car('Honda', 'Accord');
 
-    self.addScore = function  (name,score) {
-      //self.auxAssigment = new Assigment(name, score);
-      //self.arrayAssigments.push(self.auxAssigment);
+    self.addColor = function  () {
+      self.index = 0;
+      self.color_aux = new Color(funAssigments.createColor(self.color_play), true);
+      self.arrayColors.push(self.color_aux);
 
+        self.countdown = self.arrayColors.length;
+        $interval(function(){
+          console.log(self.arrayColors[self.index]);
+          console.log(self.arrayColors.length);
+          self.countdown--;
+          self.index++;
 
-      self.arrayAssigments.push({'name':name, 'score':score});
-
-      //console.log(calculateAverangeScore(self.arrayAssigments));
-      self.Student.setScores(self.arrayAssigments)
-      console.log(self.arrayAssigments);
-      console.log(self.Student);
-      console.log(self.Student.Assigments[0])
-      console.log(self.Student.aveScore())
+        },1000,self.countdown)       
     }
+
+  
 
 });

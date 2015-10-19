@@ -1,55 +1,43 @@
 angular.module('MyApp')
 
-.factory('Person', function() {
+.factory('Color', function() {
 
-	function Person(name, Assigments) {
-		this.name = name;
-		this.Assigments = [];
+	function Color(color, active) {
+		this.color = color;
+		this.active = true;
 		
 	}
 
-	Person.prototype.setScores = function(arrayAs) {
-		this.Assigments = arrayAs;
+	Color.prototype.getColor = function() {
+		return this.color;
 	};
 
-	Person.prototype.aveScore = function(){
-		var count = 0;
-		var ave = 0;
-		
-
-		if (this.Assigments.length > 0){
-
-			for (var i = 0; i < this.Assigments.length; i++) {
-			count += this.Assigments[i].score;
-			
-			};
-
-			ave = count/this.Assigments.length
-		}
-
-		return ave
+	Color.prototype.passColor = function(){
+		this.active = false;
 	}
 
 
-	return Person;
+	return Color;
 })
+
+.constant('COLOR_PLAY',['blue','yellow','red','orange'])
+
 .service('funAssigments', function(){
 	var self = this
+	
 
-	self.calculateAverangeScore = function(arrayAs){
+	self.createColor = function(color_play){
+		var x = Math.floor((Math.random() * 4 ) +1 );
+		var color_random = color_play[x-1];
 
-		var count = 0;
-		var ave = 0;
-		for (var i = 0; i < arrayAs.length; i++) {
-			count += arrayAs[i];
-			console.log('passing data')
-		};
-
-		ave = count/arrayAs.length
-
-
-		return ave
+		// for (var i = 0; i < arrayAs.length; i++) {
+		// 	count += arrayAs[i];
+		// 	console.log('passing data')
+		// };
+		
+		return color_random
 	}
 
 
 })
+
