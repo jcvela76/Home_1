@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+    <script type="text/javascript" src="sandbox.js"></script>
+    <script type="text/javascript" src="services.js"></script>
+
+    <style type="text/css">
+
+    </style>
+  </head>
+  <body ng-app="MyApp">
+
+
+<div ng-controller="MyController as ctrl">
+<!--       <div ng-repeat="folder in yourCtrl.folders">
+        <label ng-bind="folder.name"></label>
+      </div> -->
+      <h2 >About Me</h2>
+
+      <label>Name</label><br>
+      <input type="text"
+             ng-model="ctrl.assigmentName" 
+             placeholder="Enter Name">
+
+      <br>       
+      <label>Age</label><br>
+      <input type="number" 
+             ng-model="ctrl.assigmentScore"
+             placeholder=""> 
+      <div>
+           
+            <h2>Genre:</h2>
+              <input type="radio"
+                   name="item_array"
+                   ng-value="ctrl.everyArray"
+                   ng-model="ctrl.genreArray"> Everything<br>
+            <input type="radio"
+                   name="item_array"
+                   ng-value="ctrl.popsArray"
+                   ng-model="ctrl.genreArray"> Pop Hits<br>
+            <input type="radio"
+                   name="item_array"
+                   ng-value="ctrl.rockArray"
+                   ng-model="ctrl.genreArray"> Rock Hits<br>
+            <input type="radio"
+                   name="item_array"
+                   ng-value="ctrl.rapArray"
+                   ng-model="ctrl.genreArray"> Rap Hits<br>       
+            </div>
+     
+      <br><br>
+      
+
+      <div>
+           
+            <h2>Genre:</h2>
+              <input type="radio"
+                   name="item_array_2"
+                   ng-value="ctrl.clean"
+                   ng-model="ctrl.valExplicit"
+                   > clean<br>
+            <input type="radio"
+                   name="item_array_2"
+                   ng-value="ctrl.explicit"
+                   ng-model="ctrl.valExplicit"
+                   ng-trim ="false"> explicit<br>
+     
+            </div>
+     
+      <br><br>
+
+      <h2>Songs:</h2>
+      <div ng-show="ctrl.genreArray == ctrl.everyArray" ng-repeat="item in ctrl.everyArray track by $index">
+               
+            <input type="checkbox" ng-model="item.select" ng-click="ctrl.add_list(item.title,ctrl.valExplicit )"><span ng-bind="item.title"></span> 
+                
+        </div> 
+
+
+        <div ng-show="ctrl.genreArray == ctrl.popsArray" ng-repeat="item in ctrl.popsArray track by $index">
+               
+            <input type="checkbox" ng-model="item.select"><span ng-bind="item.title"></span> 
+                
+        </div> 
+
+
+        <div ng-show="ctrl.genreArray == ctrl.rockArray" ng-repeat="item in ctrl.rockArray track by $index">
+               
+            <input type="checkbox" ng-model="item.select"><span ng-bind="item.title"></span> 
+                
+        </div> 
+
+       <div ng-show="ctrl.genreArray == ctrl.rapArray" ng-repeat="item in ctrl.rapArray track by $index">
+               
+            <input type="checkbox" ng-model="item.select"><span ng-bind="item.title"></span> 
+                
+        </div> 
+
+       <button ng-click="ctrl.submitList()">Submit</button>
+
+       <pre>{{self.Student.songs | json}} </pre>
+    </div>
+  </body>
+</html>
