@@ -11,6 +11,9 @@ angular.module('MyApp')
 	Color.prototype.getColor = function() {
 		return this.color;
 	};
+	Color.prototype.getValidation = function() {
+		return this.active;
+	};
 
 	Color.prototype.passColor = function(){
 		this.active = false;
@@ -24,7 +27,7 @@ angular.module('MyApp')
 
 .service('funAssigments', function(){
 	var self = this
-	
+
 
 	self.createColor = function(color_play){
 		var x = Math.floor((Math.random() * 4 ) +1 );
@@ -34,7 +37,7 @@ angular.module('MyApp')
 		// 	count += arrayAs[i];
 		// 	console.log('passing data')
 		// };
-		
+
 		return color_random
 	}
 

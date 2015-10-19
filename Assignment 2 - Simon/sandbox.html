@@ -17,38 +17,34 @@
 
       <h2 ng-bind="ctrl.Student.name"></h2>
 
-      <label>Assigment Name</label>
-      <input type="text"
-             ng-model="ctrl.assigmentName" 
-             placeholder="Name">
+      <label>Simon say...</label>
 
-      <br>       
-      <label>Assigment Score</label>
-      <input type="number" 
-             ng-model="ctrl.assigmentScore"
-             placeholder="Score">
-
+      <br>
       
 
-      <button ng-click="ctrl.addColor()">Add</button>
+      <button ng-show="ctrl.view_star" ng-click="ctrl.addColor()">Play</button>
       <br><br>
+ 
+
+      <table ng-repeat="color in ctrl.arrayColors track by $index">
+        <tr>
+          <td width="200" ng-bind="color.getColor()"></td>
+          
+        </tr>  
+      </table>
       <table>
         <tr>
-          <td width="200">Name Assigment</td>
-          <td width="200">Score Assigment</td>
+          <td ng-show="ctrl.table.blue">blue</td>
+          <td ng-show="ctrl.table.yellow">yellow</td>
+        </tr>
+        <tr>
+          <td ng-show="ctrl.table.red">red</td>
+          <td ng-show="ctrl.table.orange">orange</td>
         </tr>
       </table>
 
-      <table ng-repeat="assigment in ctrl.arrayAssigments track by $index">
-        <tr>
-          <td width="200" ng-bind="assigment.name"></td>
-          <td width="200" ng-bind="assigment.score"></td>
-        </tr>  
-      </table>
 
-
-      <h2>Averange</h2>
-      <span ng-bind="ctrl.Student.aveScore()"></span>
+     
 
 
 
