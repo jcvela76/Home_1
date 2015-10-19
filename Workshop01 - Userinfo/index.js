@@ -5,9 +5,9 @@ angular.module('MyApp', [])
   var self = this;
 
   self.user = {
-  	fname: 'George',
-  	lname: 'Dagher',
-  	email: 'george@nycda.com'
+  	fname: 'Julio',
+  	lname: 'Vela',
+  	email: 'jcvela@gmail.com'
   };
 
   self.setEdit = function() {
