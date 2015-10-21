@@ -7,7 +7,37 @@
     <script type="text/javascript" src="services.js"></script>
 
     <style type="text/css">
-
+        .active{
+          opacity: 0.5;
+        }
+        .blue{
+          background: blue;
+          width: 200px;
+          height: 200px;
+          float: left;
+        }
+        .red{
+          background: red;
+          width: 200px;
+          height: 200px;
+          float: left;
+        }
+        .orange{
+          background: orange;
+          width: 200px;
+          height: 200px;
+          float: left;
+        }
+        .yellow{
+          background: yellow;
+          width: 200px;
+          height: 200px;
+          float: left;
+        }
+        .table-game{
+          width: 410px;
+          margin: 0 auto;
+        }
     </style>
   </head>
   <body ng-app="MyApp">
@@ -32,19 +62,18 @@
           
         </tr>  
       </table>
-      <table>
-        <tr>
-          <td ng-show="ctrl.table.blue">blue</td>
-          <td ng-show="ctrl.table.yellow">yellow</td>
-        </tr>
-        <tr>
-          <td ng-show="ctrl.table.red">red</td>
-          <td ng-show="ctrl.table.orange">orange</td>
-        </tr>
-      </table>
+      <hr>
 
+      <div ng-repeat="colors in ctrl.table track by $index" class="table-game">
+        <div ng-class="{active: colors.active}"  >
+          <div ng-bind="colors.color" ng-class="colors.color" ng-click="ctrl.choiseColor(colors.color)"></div>
+        </div>
 
-     
+      </div>
+
+     <!-- <pre id="custom-spacing">{{ ctrl.arrayColors | json:4 }}</pre>
+
+     <pre id="custom-spacing">{{ ctrl.table | json:4 }}</pre> -->
 
 
 

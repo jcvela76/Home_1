@@ -3,8 +3,8 @@ angular.module('MyApp')
 .factory('Color', function() {
 
 	function Color(color, active) {
-		this.color = color;
-		this.active = true;
+		this.color = color || "blue";
+		this.active = active ;
 		
 	}
 
@@ -23,22 +23,21 @@ angular.module('MyApp')
 	return Color;
 })
 
-.constant('COLOR_PLAY',['blue','yellow','red','orange'])
+// .value('COLOR_PLAY',[new Color("Blue",true),
+// 					    {"color":"red","active":true},
+// 					    {"color":"orange","active":true},
+// 					    {"color":"yellow","active":true}
+// 					    ])
 
 .service('funAssigments', function(){
 	var self = this
 
 
-	self.createColor = function(color_play){
-		var x = Math.floor((Math.random() * 4 ) +1 );
-		var color_random = color_play[x-1];
-
-		// for (var i = 0; i < arrayAs.length; i++) {
-		// 	count += arrayAs[i];
-		// 	console.log('passing data')
-		// };
-
-		return color_random
+	self.selectRandon = function(array_select){
+		var longitud = array_select.length;
+		var x = Math.floor((Math.random() * longitud ) +1 );
+		var element_random = array_select[x-1];
+		return element_random;
 	}
 
 
