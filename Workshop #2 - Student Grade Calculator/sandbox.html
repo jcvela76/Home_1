@@ -38,6 +38,7 @@
         <tr>
           <td width="200">Name Assigment</td>
           <td width="200">Score Assigment</td>
+          <td width="200">Grade Assigment</td>
         </tr>
       </table>
 
@@ -45,12 +46,15 @@
         <tr>
           <td width="200" ng-bind="assigment.name"></td>
           <td width="200" ng-bind="assigment.score"></td>
+          <td width="200" ng-bind="assigment.grade"></td>
         </tr>  
       </table>
 
 
       <h2>Averange</h2>
       <span ng-bind="ctrl.Student.aveScore()"></span>
+      <h2>Final Grade</h2>
+      <span ng-bind="ctrl.getGradeTotal()"></span>
 
 
 
